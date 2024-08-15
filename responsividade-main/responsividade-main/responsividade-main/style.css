@@ -1,0 +1,151 @@
+@import url("styles/header.css");
+@import url("styles/banner.css");
+@import url("styles/carrossel.css");
+@import url("styles/topicos.css");
+
+:root {
+    --cor-de-fundo: #EBECEE;
+    --branco: #FFFFFF;
+    --lilas: #c9c1e5;
+    --lilas-mais-forte:#46295A;
+    --lilas-degrade: linear-gradient( #81638b, #b695c0);
+    --fonte-principal: "Poppins";
+    --azul: #002F52;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+nav.menu-lateral{
+    width: 0;
+    height: 100%;
+    background-color: #202020;
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #c9c1e5;
+    position:fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
+    z-index: 99999;
+    overflow: hidden;
+}
+
+.menu-lateral .btn-expandir{
+    padding: 20px 4%;
+}
+
+.menu-lateral .btn-expandir i{
+    color: #b695c0;
+    font-size: 24px;
+
+}
+
+.menu-lateral .btn-reduzir{
+    padding: 20px 4%;
+}
+
+.menu-lateral .btn-reduzir i{
+    color: #b695c0;
+    font-size: 24px;
+
+}
+
+nav.menu-lateral.expandir{
+    width: 300px;
+}
+
+.menu-lateral.ativos{
+    width: 70%;
+}
+
+.menu-lateral.ativos ~ .overlay-menu{
+    display: block;
+}
+
+.btn.expandir{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir > i{
+    color: #c9c1e5;
+    font-size: 24px;
+    cursor: pointer;
+} 
+
+.btn.reduzir{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-reduzir > i{
+    color: #c9c1e5;
+    font-size: 24px;
+    cursor: pointer;
+} 
+
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu{
+    transition: .2s;
+}
+
+ul li.ativo{
+    background-color: #c9c1e5;
+}
+
+ul li.item-menu:hover{
+    background: #c9c1e5;
+}
+
+ul li.item-menu a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 16px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+ul li.item-menu a .txt-link{
+    margin-left: 40px;
+    transition: .5s;
+    opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link{
+    margin-left: 20px;
+    opacity: 1;
+}
+
+ul li.item-menu a .icon > i{
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+
+
+.btn-abrir-menu i{
+    color: #b695c0;
+    font-size: 24px;
+}
+
+.overlay-menu{
+  background-color: #00000093;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 88888;
+  display: none;
+}
